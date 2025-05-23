@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrendyTees - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles if needed */
+        .cookie-consent-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body class="font-sans">
+
+    <div class="navbar bg-base-200 shadow-md">
+        <div class="flex-1">
+            <a href="index.html" class="btn btn-ghost normal-case text-2xl font-bold text-primary">TrendyTees</a>
+        </div>
+        <div class="flex-none">
+            <ul class="menu menu-horizontal px-1">
+                <li><a href="index.html" class="font-semibold">Home</a></li>
+                <li><a href="products.html" class="font-semibold">Products</a></li>
+                <li>
+                    <a href="products.html#cart-sidebar" class="font-semibold">
+                        Cart
+                        <span class="badge badge-sm badge-primary ml-1" id="cart-count-nav">0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="hero min-h-screen" style="background-image: url('https://m.media-amazon.com/images/I/81-gY5kHgsL._AC_UF350,350_QL80_.jpg');">
+        <div class="hero-overlay bg-black bg-opacity-60"></div>
+        <div class="hero-content text-center text-neutral-content">
+            <div class="max-w-md">
+                <h1 class="mb-5 text-5xl font-bold">Find Your Perfect Tee</h1>
+                <p class="mb-5">Explore our exclusive collection of trendy T-shirts, crafted for comfort and style.</p>
+                <a href="products.html" class="btn btn-primary">Shop Now</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="py-16 bg-base-100">
+        <h2 class="text-3xl font-bold text-center mb-10">What Our Customers Say</h2>
+        <div class="max-w-3xl mx-auto grid md:grid-cols-2 gap-8 px-4">
+            <div class="p-6 rounded-lg shadow-lg bg-base-200">
+                <p class="italic text-lg">"The quality is amazing and the designs are so unique! Definitely my new favorite tee shop."</p>
+                <p class="text-right mt-3 font-semibold text-primary">- Alex P.</p>
+            </div>
+            <div class="p-6 rounded-lg shadow-lg bg-base-200">
+                <p class="italic text-lg">"Fast shipping and the t-shirt fits perfectly. I've already gotten so many compliments!"</p>
+                <p class="text-right mt-3 font-semibold text-primary">- Maria K.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="py-16 bg-primary text-primary-content">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Stay in the Loop</h2>
+            <p class="mb-6 max-w-lg mx-auto">Sign up for our newsletter to get the latest deals, new arrivals, and exclusive offers!</p>
+            <form class="form-control max-w-sm mx-auto" id="newsletter-form">
+                <div class="input-group">
+                    <input type="email" id="newsletter-email" placeholder="your-email@example.com" class="input input-bordered w-full text-base-content" required />
+                    <button type="submit" class="btn bg-base-100 text-primary hover:bg-base-200">
+                        Subscribe
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer p-10 bg-neutral text-neutral-content">
+        <div>
+            <span class="footer-title">Services</span>
+            <a class="link link-hover" href="products.html">Shop</a>
+            <a class="link link-hover">FAQs</a>
+            <a class="link link-hover">Shipping</a>
+        </div>
+        <div>
+            <span class="footer-title">Company</span>
+            <a class="link link-hover">About us</a>
+            <a class="link link-hover">Contact</a>
+            <a class="link link-hover">Terms of use</a>
+            <a class="link link-hover">Privacy policy</a>
+        </div>
+        <div>
+            <span class="footer-title">Developer</span>
+            <a href="" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+                Developer's Profile
+            </a>
+        </div>
+    </footer>
+    <div class="footer footer-center p-4 bg-base-300 text-base-content">
+        <div>
+            <p>Copyright © <span id="current-year"></span> - All right reserved by TrendyTees Ltd</p>
+        </div>
+    </div>
+
+    <div id="cookie-consent-banner" class="cookie-consent-banner bg-neutral text-neutral-content p-4 text-center hidden">
+        <p class="inline">We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies. </p>
+        <button id="accept-cookies-btn" class="btn btn-sm btn-primary ml-2">Accept</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

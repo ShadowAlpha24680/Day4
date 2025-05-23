@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrendyTees - Checkout</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .cookie-consent-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body class="font-sans">
+
+    <div class="navbar bg-base-200 shadow-md">
+        <div class="flex-1">
+            <a href="index.html" class="btn btn-ghost normal-case text-2xl font-bold text-primary">TrendyTees</a>
+        </div>
+        <div class="flex-none">
+            <ul class="menu menu-horizontal px-1">
+                <li><a href="index.html" class="font-semibold">Home</a></li>
+                <li><a href="products.html" class="font-semibold">Products</a></li>
+                <li>
+                    <a href="products.html#cart-sidebar" class="font-semibold">
+                        Cart
+                        <span class="badge badge-sm badge-primary ml-1" id="cart-count-nav">0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container mx-auto px-4 py-12">
+        <h1 class="text-3xl font-bold text-center mb-10">Checkout</h1>
+
+        <div class="flex flex-col lg:flex-row gap-12">
+            <div class="lg:w-2/3">
+                <form id="checkout-form" class="space-y-6">
+                    <div class="card bg-base-200 shadow-lg p-6">
+                        <h2 class="text-xl font-semibold mb-4">Shipping Information</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="fullName" class="label">Full Name</label>
+                                <input type="text" id="fullName" placeholder="John Doe" class="input input-bordered w-full" required />
+                            </div>
+                            <div>
+                                <label for="email" class="label">Email Address</label>
+                                <input type="email" id="email" placeholder="you@example.com" class="input input-bordered w-full" required />
+                            </div>
+                            <div class="md:col-span-2">
+                                <label for="address" class="label">Street Address</label>
+                                <input type="text" id="address" placeholder="123 Main St" class="input input-bordered w-full" required />
+                            </div>
+                            <div>
+                                <label for="city" class="label">City</label>
+                                <input type="text" id="city" placeholder="Anytown" class="input input-bordered w-full" required />
+                            </div>
+                            <div>
+                                <label for="zip" class="label">ZIP / Postal Code</label>
+                                <input type="text" id="zip" placeholder="12345" class="input input-bordered w-full" required />
+                            </div>
+                             <div>
+                                <label for="country" class="label">Country</label>
+                                <input type="text" id="country" placeholder="United States" class="input input-bordered w-full" required />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card bg-base-200 shadow-lg p-6">
+                        <h2 class="text-xl font-semibold mb-4">Payment Details</h2>
+                        <p class="text-sm mb-4">This is a demo. No real payment will be processed.</p>
+                        <div>
+                            <label for="cardNumber" class="label">Card Number</label>
+                            <input type="text" id="cardNumber" placeholder="•••• •••• •••• ••••" class="input input-bordered w-full" />
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 mt-4">
+                            <div>
+                                <label for="expiryDate" class="label">Expiry Date</label>
+                                <input type="text" id="expiryDate" placeholder="MM/YY" class="input input-bordered w-full" />
+                            </div>
+                            <div>
+                                <label for="cvc" class="label">CVC</label>
+                                <input type="text" id="cvc" placeholder="123" class="input input-bordered w-full" />
+                            </div>
+                        </div>
+                    </div>
+                     <button type="submit" class="btn btn-primary btn-block text-lg">Place Order</button>
+                </form>
+            </div>
+
+            <aside class="lg:w-1/3 p-6 bg-base-200 rounded-lg shadow-xl self-start sticky top-8">
+                <h2 class="text-2xl font-bold mb-6 text-center">Order Summary</h2>
+                <div id="order-summary-items" class="space-y-4 max-h-96 overflow-y-auto mb-4">
+                    <p class="text-center text-gray-500">Your cart is empty.</p>
+                </div>
+                <div class="divider"></div>
+                <div class="space-y-2 text-lg">
+                    <div class="flex justify-between">
+                        <span>Subtotal:</span>
+                        <span id="summary-subtotal">$0.00</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Shipping:</span>
+                        <span id="summary-shipping">$5.00</span> </div>
+                    <div class="divider"></div>
+                    <div class="flex justify-between font-bold text-xl">
+                        <span>Total:</span>
+                        <span id="summary-total">$0.00</span>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <footer class="footer p-10 bg-neutral text-neutral-content mt-10">
+        <div>
+            <span class="footer-title">Services</span>
+            <a class="link link-hover" href="products.html">Shop</a>
+            <a class="link link-hover">FAQs</a>
+            <a class="link link-hover">Shipping</a>
+        </div>
+        <div>
+            <span class="footer-title">Company</span>
+            <a class="link link-hover">About us</a>
+            <a class="link link-hover">Contact</a>
+            <a class="link link-hover">Terms of use</a>
+            <a class="link link-hover">Privacy policy</a>
+        </div>
+        <div>
+            <span class="footer-title">Developer</span>
+             <a href="YOUR_PORTFOLIO_URL_HERE" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+                Developer's Profile
+            </a>
+        </div>
+    </footer>
+    <div class="footer footer-center p-4 bg-base-300 text-base-content">
+        <div>
+            <p>Copyright © <span id="current-year"></span> - All right reserved by TrendyTees Ltd</p>
+        </div>
+    </div>
+
+    <div id="cookie-consent-banner" class="cookie-consent-banner bg-neutral text-neutral-content p-4 text-center hidden">
+        <p class="inline">We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies. </p>
+        <button id="accept-cookies-btn" class="btn btn-sm btn-primary ml-2">Accept</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
