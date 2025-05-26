@@ -1,19 +1,48 @@
 <!DOCTYPE html>
 <html data-theme="light">
 <head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VS9128JFT4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VS9128JFT4');
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TrendyTees - Home</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shadowalpha24680.github.io/Day4/">
+    <meta property="og:title" content="TrendyTees - Home">
+    <meta property="og:description" content="Explore our exclusive collection of trendy T-shirts, crafted for comfort and style.">
+    <meta property="og:image" content="https://m.media-amazon.com/images/I/81-gY5kHgsL._AC_UF350,350_QL80_.jpg">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://shadowalpha24680.github.io/Day4/">
+    <meta property="twitter:title" content="TrendyTees - Home">
+    <meta property="twitter:description" content="Explore our exclusive collection of trendy T-shirts, crafted for comfort and style.">
+    <meta property="twitter:image" content="https://m.media-amazon.com/images/I/81-gY5kHgsL._AC_UF350,350_QL80_.jpg">
+
     <style>
-        /* Custom styles if needed */
         .cookie-consent-banner {
             position: fixed;
             bottom: 0;
             left: 0;
             right: 0;
             z-index: 1000;
+        }
+        .share-buttons a {
+            margin: 0 5px;
+            display: inline-block;
+        }
+        .share-buttons img {
+            width: 32px; /* Adjust size as needed */
+            height: 32px;
         }
     </style>
 </head>
@@ -77,6 +106,20 @@
         </div>
     </div>
 
+    <div class="py-16 bg-base-100">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Share Our Page</h2>
+            <div class="share-buttons">
+                <a href="#" id="share-facebook" title="Share on Facebook"><img src="https://img.icons8.com/fluent/48/000000/facebook-new.png" alt="Facebook"/></a>
+                <a href="#" id="share-twitter" title="Share on Twitter"><img src="https://img.icons8.com/fluent/48/000000/twitter.png" alt="Twitter"/></a>
+                <a href="#" id="share-linkedin" title="Share on LinkedIn"><img src="https://img.icons8.com/fluent/48/000000/linkedin.png" alt="LinkedIn"/></a>
+                <a href="#" id="share-whatsapp" title="Share on WhatsApp"><img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp"/></a>
+                <a href="#" id="share-email" title="Share via Email"><img src="https://img.icons8.com/fluent/48/000000/filled-message.png" alt="Email"/></a>
+            </div>
+        </div>
+    </div>
+
+
     <footer class="footer p-10 bg-neutral text-neutral-content">
         <div>
             <span class="footer-title">Services</span>
@@ -93,7 +136,7 @@
         </div>
         <div>
             <span class="footer-title">Developer</span>
-            <a href="" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+            <a href="https://shadowalpha24680.github.io/Day3/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
                 Developer's Profile
             </a>
         </div>
@@ -110,5 +153,5 @@
     </div>
 
     <script src="script.js"></script>
-</body>
+    </body>
 </html>
